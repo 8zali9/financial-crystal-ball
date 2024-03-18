@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 export default function Home() {
-  const [res, setRes] = useState("--hello from client")
+  const [res, setRes] = useState("hello from client")
 
   useEffect(() => {
     async function run() {
@@ -11,10 +11,9 @@ export default function Home() {
           'Content-Type': 'application/json',
         },
       })
-        const data = await response.json();
-        setRes(data.msg);
+      const data = await response.json()
+      setRes(data.msg);
       }
-
       run()
   }, [])
 

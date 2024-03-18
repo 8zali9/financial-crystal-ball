@@ -1,0 +1,10 @@
+mongodb+srv://8zali9:4411aweb8@fcb-cluster.xqy54ru.mongodb.net/?retryWrites=true&w=majority&appName=fcb-cluster
+
+install:
+python -m pip install "pymongo[srv]"
+
+conn-string
+mongodb+srv://8zali9:<password>@fcb-cluster.xqy54ru.mongodb.net/
+
+api key
+AIzaSyCew_l9wYlIXvpBjInrYkRkLPWcEKkfbMo

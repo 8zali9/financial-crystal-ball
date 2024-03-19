@@ -1,0 +1,19 @@
+.content-div{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: stretch;
+}
+
+@media only screen and (max-width: 767px) {
+    .content-div{
+        display: flex;
+        flex-direction: column-reverse;
+        height: 100%;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: center;
+    }
+}

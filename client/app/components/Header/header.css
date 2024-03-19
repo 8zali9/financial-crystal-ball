@@ -1,0 +1,126 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 0px 4px 4px #0000003b;
+    color: #000080;
+}
+
+.heading{
+    display: flexbox;
+    flex-direction: column;
+    align-self: center;
+    align-items: flex-start;
+    font-size: 25px;
+    line-height: 4px;
+}
+
+.heading-p2{
+    gap: 8px;
+}
+
+.control-panel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #AACCFF;
+    color: #FFFFFF;
+    border: 2px solid transparent;
+    border-radius: 34px;
+    padding: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    height: 40px;
+}
+
+.control-panel-btns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:flex-start;
+}
+
+.cp{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    height: 50px;
+    border-radius: 34px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: 0.2s ease;
+}
+
+.cp:hover{
+    cursor: pointer;
+    background-color: #ffffff49;
+}
+
+.cp-btn{
+    color: #000080;
+    font-size: 22px;
+    font-weight: lighter;
+    align-self: center;
+    justify-content: center;
+    background-color: transparent;
+    transform: rotateY(180deg);
+    transition: 0.2s ease;
+    border-right: 2px solid #F0F0F0;
+    border-radius: 2px;
+}
+
+.cp-btn:hover{
+    background-color: transparent;
+    color: #FFFFFF;
+}
+
+.contact-devs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: #000080da;
+    border-radius: 4px;
+    color: white;
+    padding-left: 7px;
+    padding-right: 7px;
+    transition: width 0.4s ease;
+    cursor: pointer;
+}
+
+.contact-devs p{
+    margin-right: 5px;
+}
+
+.contact-devs:hover{
+    background-color: #000080;
+}
+
+@media only screen and (max-width: 767px) {
+    .header{
+        display: flex;
+        flex-direction: column;
+        box-shadow: none;
+        gap: 0px;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .heading{
+        display: flex;
+        font-size: 22px;
+        align-self: center;
+        align-items: center;
+    }
+    
+    .heading-p2{
+        margin-top: 0px;
+    }
+    
+    .control-panel{
+        margin-bottom: 10px;
+    }
+}

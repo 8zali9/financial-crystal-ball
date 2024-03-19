@@ -1,0 +1,114 @@
+.dev-content-inactive{
+    display:none;
+    transition: 3s ease;
+}
+
+.dev-content-active{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 30%;
+    background-color: white;
+    border-radius: 4px;
+    border: 1.5px solid #000080;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.dev-content-main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.dev-content-active i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000080;
+    padding: 5px;
+    color: white;
+    border-radius: 4px;
+}
+
+.dev-content-main1, .dev-content-main2{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50%;
+    border-left: 4px solid #000080;
+    border-top: 2px solid #000080;
+    border-bottom: 2px solid #000080;
+    border-right: 2px solid #000080;
+    color: #000080;
+    border-radius: 4px;
+}
+
+.dev-content-active h4{
+    display: flex;
+    align-items: center;
+    color: #000;
+}
+
+.dev-contact-link-div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dev-contact-link{
+    display: flex;
+    align-items: center;
+    color: #000080;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.dev-contact-link:hover{
+    color: #AACCFF;    
+}
+
+.icon{
+    margin-right: 8px;
+}
+
+@media only screen and (max-width: 767px) {
+    .dev-content-main{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 5%;
+        margin: 20px;
+    }
+
+    .dev-content-active{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        overflow: hidden;
+        background-color: #aaccff7e;
+        justify-content: center;
+        border-radius: 4px;
+    }
+
+    .dev-content-active{
+        border: none;
+    }
+    
+    .dev-content-main{
+        flex-direction: column-reverse;
+        margin-top: 10px;
+    }
+    
+    .dev-content-main1, .dev-content-main2{
+        padding: 0;
+        border: none;
+    }
+
+    .dev-contact-link:hover{
+        color: white;    
+    }
+}

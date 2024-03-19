@@ -4,88 +4,21 @@
 }
 
 body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
     background-color: #F0F0F0;
     color: #000080;
-    margin: 0;
 }
 
-.HomePage{
+.homePage{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px;
-    overflow: hidden;
-}
-
-.heading{
-    display: flexbox;
     flex-direction: column;
-    align-self: center;
-    align-items: start;
-    font-size: 20px;
-    width: 100%;
-    line-height: 4px;
-    margin-right: 20px;
-}
-
-.heading-p2{
-    gap: 8px;
-}
-
-.control-panel{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #AACCFF;
-    color: #FFFFFF;
-    border: 2px solid transparent;
-    border-radius: 34px;
-    padding: 10px;
-    padding-left: 0;
-    padding-right: 0;
-    width: 350vh;
-    height: 40px;
-    margin-right: 370px;
-}
-
-.control-panel-btns{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:flex-start;
-}
-
-.cp{
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    height: 50px;
-    border-radius: 34px;
-    padding: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    transition: 0.2s ease;
-}
-
-.cp:hover{
-    cursor: pointer;
-    background-color: #ffffff49;
-}
-
-.cp-btn{
-    color: #000080;
-    font-size: 22px;
-    font-weight: lighter;
-    align-self: center;
     justify-content: center;
-    background-color: transparent;
-    transform: rotateY(180deg);
-    transition: 0.2s ease;
-    border-right: 2px solid #F0F0F0;
-    border-radius: 2px;
 }
 
-.cp-btn:hover{
-    background-color: transparent;
-    color: #FFFFFF;
+@media only screen and (max-width: 767px) {
+    body{
+        overflow-x: hidden;
+    }
 }

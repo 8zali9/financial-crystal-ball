@@ -1,14 +1,14 @@
-.header{
+.header {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
     box-shadow: 0px 4px 4px #0000003b;
-    color: #000080;
+    color: silver;
 }
 
-.heading{
+.heading {
     display: flexbox;
     flex-direction: column;
     align-self: center;
@@ -17,15 +17,15 @@
     line-height: 4px;
 }
 
-.heading-p2{
+.heading-p2 {
     gap: 8px;
 }
 
-.control-panel{
+.control-panel {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #AACCFF;
+    background-color: grey;
     color: #FFFFFF;
     border: 2px solid transparent;
     border-radius: 34px;
@@ -35,14 +35,14 @@
     height: 40px;
 }
 
-.control-panel-btns{
+.control-panel-btns {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:flex-start;
+    justify-content: flex-start;
 }
 
-.cp{
+.cp {
     display: flex;
     align-items: center;
     background-color: transparent;
@@ -54,12 +54,12 @@
     transition: 0.2s ease;
 }
 
-.cp:hover{
+.cp:hover {
     cursor: pointer;
     background-color: #ffffff49;
 }
 
-.cp-btn{
+.cp-btn {
     color: #000080;
     font-size: 22px;
     font-weight: lighter;
@@ -72,17 +72,17 @@
     border-radius: 2px;
 }
 
-.cp-btn:hover{
+.cp-btn:hover {
     background-color: transparent;
     color: #FFFFFF;
 }
 
-.contact-devs{
+.contact-devs {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    background-color: #000080da;
+    background-color: gray;
     border-radius: 4px;
     color: white;
     padding-left: 7px;
@@ -91,16 +91,16 @@
     cursor: pointer;
 }
 
-.contact-devs p{
+.contact-devs p {
     margin-right: 5px;
 }
 
-.contact-devs:hover{
+.contact-devs:hover {
     background-color: #000080;
 }
 
 @media only screen and (max-width: 767px) {
-    .header{
+    .header {
         display: flex;
         flex-direction: column;
         box-shadow: none;
@@ -109,18 +109,18 @@
         justify-content: flex-start;
     }
 
-    .heading{
+    .heading {
         display: flex;
         font-size: 22px;
         align-self: center;
         align-items: center;
     }
-    
-    .heading-p2{
+
+    .heading-p2 {
         margin-top: 0px;
     }
-    
-    .control-panel{
+
+    .control-panel {
         margin-bottom: 10px;
     }
 }

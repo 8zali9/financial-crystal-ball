@@ -3,22 +3,22 @@
     src: url('/OpenSans-Bold.ttf') format('truetype');
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: #F0F0F0;
-    color: #000080;
+    background-color: black;
+    color: white;
 }
 
-.homePage{
+.homePage {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 @media only screen and (max-width: 767px) {
-    body{
+    body {
         overflow-x: hidden;
     }
 }

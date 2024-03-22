@@ -7,4 +7,4 @@ conn-string
 mongodb+srv://8zali9:<password>@fcb-cluster.xqy54ru.mongodb.net/
 
 api key
-AIzaSyCew_l9wYlIXvpBjInrYkRkLPWcEKkfbMo
+AIzaSyA9ATqEGhnx0_Lrv407L__9fe77p8AvWLs

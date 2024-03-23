@@ -23,6 +23,6 @@ def to_markdown(text):
     return indented_text
 
 def gen(stockInput, minDate, maxDate):
-    response = model.generate_content(f"The follwoing list has stock data from `{minDate}` to `{maxDate}`: `{stockInput}`. Analyze the relation and give predictions for the next day; output in the same format.")
+    response = model.generate_content(f"Based on the following stock data from `{minDate}` to `{maxDate}`: `{stockInput}`, generate predictions for the next week in the exact same format as the input. Please provide the output directly without any additional analysis or commentary.")
     text = to_markdown(response.text)
-    print(text)
+    return text

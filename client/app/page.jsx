@@ -1,7 +1,6 @@
 "use client"
 
 // import { useState, useEffect } from "react"
-import Header from "./components/Header/Header";
 import Content from "./components/content/Content";
 export default function Home() {
   // const [res, setRes] = useState("hello from client")
@@ -20,8 +19,8 @@ export default function Home() {
   // }, [])
 
   return (
-  <div className="homePage">
-    <Content />
-  </div>
+    <div className="homePage">
+      <Content />
+    </div>
   )
 }

@@ -4,8 +4,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    box-shadow: 0px 4px 4px #0000003b;
-    color: silver;
+    color: lightgray;
+    background-color: rgb(15, 26, 26);
 }
 
 .heading {
@@ -25,7 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: grey;
+    background-color: rgba(47, 79, 79, 0.651);
     color: #FFFFFF;
     border: 2px solid transparent;
     border-radius: 34px;
@@ -52,15 +52,17 @@
     padding-left: 15px;
     padding-right: 15px;
     transition: 0.2s ease;
+    color: lightgray;
 }
 
 .cp:hover {
     cursor: pointer;
-    background-color: #ffffff49;
+    background-color: rgba(47, 79, 79, 0.603);
+    color: white;
 }
 
 .cp-btn {
-    color: #000080;
+    color: rgba(211, 211, 211, 0.445);
     font-size: 22px;
     font-weight: lighter;
     align-self: center;
@@ -68,13 +70,13 @@
     background-color: transparent;
     transform: rotateY(180deg);
     transition: 0.2s ease;
-    border-right: 2px solid #F0F0F0;
+    border-right: 2px solid lightgray;
     border-radius: 2px;
 }
 
 .cp-btn:hover {
     background-color: transparent;
-    color: #FFFFFF;
+    color: white;
 }
 
 .contact-devs {
@@ -82,12 +84,13 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    background-color: gray;
+    background-color: darkslategray;
+    border: 2px solid darkslategray;
     border-radius: 4px;
     color: white;
     padding-left: 7px;
     padding-right: 7px;
-    transition: width 0.4s ease;
+    transition: 0.2s ease;
     cursor: pointer;
 }
 
@@ -96,7 +99,7 @@
 }
 
 .contact-devs:hover {
-    background-color: #000080;
+    border-color: white;
 }
 
 @media only screen and (max-width: 767px) {

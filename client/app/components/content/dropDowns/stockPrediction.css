@@ -19,12 +19,12 @@
     gap: 30px;
 }
 
-.AAPL {
+.sp-ticker {
     color: white;
     transition: 0.3s ease;
 }
 
-.AAPL:hover {
+.sp-ticker:hover {
     color: darkslategray;
     cursor: pointer;
 }

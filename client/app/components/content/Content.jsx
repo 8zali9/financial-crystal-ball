@@ -1,6 +1,6 @@
 "use client"
 
-import StockPrediction from './dropDowns/stockPrediction'
+import StockPrediction from './dropDowns/StockPrediction'
 import { useContext } from 'react'
 import { ToggleContext } from '../../contextProviders/Toggles'
 import './content.css'

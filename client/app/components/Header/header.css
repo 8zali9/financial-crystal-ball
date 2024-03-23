@@ -3,9 +3,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
     color: lightgray;
     background-color: rgb(15, 26, 26);
+    border-bottom: 2px solid rgba(130, 214, 214, 0.651);
 }
 
 .heading {
@@ -53,6 +56,11 @@
     padding-right: 15px;
     transition: 0.2s ease;
     color: lightgray;
+}
+
+.cp-active {
+    background-color: rgba(47, 79, 79, 0.603);
+    color: rgb(65, 225, 212);
 }
 
 .cp:hover {

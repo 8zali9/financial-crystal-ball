@@ -7,8 +7,9 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: white;
-    color: black;
+    width: 100%;
+    background-color: #212529;
+    color: rgba(255, 255, 255, 0.884);
 }
 
 .homePage {

@@ -1,0 +1,30 @@
+.stock-prediction-drop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(15, 26, 26);
+    color: white;
+    border-radius: 4px;
+    width: 100%;
+    border-bottom: 2px solid darkslategray;
+    padding: 20px;
+}
+
+.sp-select-tickers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.AAPL {
+    color: white;
+    transition: 0.3s ease;
+}
+
+.AAPL:hover {
+    color: darkslategray;
+    cursor: pointer;
+}

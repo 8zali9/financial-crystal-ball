@@ -3,6 +3,7 @@
 import './mainContent.css'
 import React, { useEffect, useContext, useState } from 'react'
 import { ToggleContext } from '../../../contextProviders/Toggles'
+import { parseResponseToJSON } from '../../../utils/ParseToJson'
 
 export default function MainContent() {
   const [stockData, setStockData] = useState([])
@@ -20,7 +21,8 @@ export default function MainContent() {
       const data = await response.json()
 
       setStockData(data)
-      console.log(data)
+      const json = parseResponseToJSON(data)
+      console.log(json)
       handleTickerParam(null)
     }
 

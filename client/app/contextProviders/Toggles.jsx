@@ -9,6 +9,8 @@ export default function Toggles({ children }) {
   const [currentMarketStateToggle, setCurrentMarketStateToggle] = useState(false)
   const [stockPredictionToggle, setStockPredictionToggle] = useState(false)
 
+  const [tickerParam, setTickerParam] = useState(null)
+
   function handleDevContentToggle() {
     setDevContentToggle(!devContentToggle)
   }
@@ -23,11 +25,15 @@ export default function Toggles({ children }) {
     setStockPredictionToggle(!stockPredictionToggle)
   }
 
+  function handleTickerParam(ticker) {
+    setTickerParam(ticker)
+  }
+
   return (
     <ToggleContext.Provider
       value={{
-        devContentToggle, currentMarketStateToggle, stockPredictionToggle,
-        handleDevContentToggle, handleCurrentMarketStateToggle, handleStockPredictionToggle
+        devContentToggle, currentMarketStateToggle, stockPredictionToggle, tickerParam,
+        handleDevContentToggle, handleCurrentMarketStateToggle, handleStockPredictionToggle, handleTickerParam
       }}>
       {children}
     </ToggleContext.Provider>

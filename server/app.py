@@ -30,14 +30,14 @@ DB = mongo.db
 
 
 # routes
-@app.route('/getPredictions/<ticker>/<timeUnits>', methods=["GET"])
-def getPredictions(ticker, timeUnits):
+@app.route('/getPredictions/<ticker>', methods=["GET"])
+def getPredictions(ticker):
     from datetime import date, timedelta
     lastDayDate = date.today() - timedelta(days=1)
     lastLastMonthDate = date.today() - timedelta(days=70)
 
     stockInputForGemini = []
-    for a in client.list_aggs(ticker=ticker, multiplier=1, timespan=timeUnits, from_=lastLastMonthDate, to=lastDayDate, limit=150):
+    for a in client.list_aggs(ticker=ticker, multiplier=1, timespan="day", from_=lastLastMonthDate, to=lastDayDate, limit=150):
         stockInputForGemini.append(a)
 
     from utils.chat import gen

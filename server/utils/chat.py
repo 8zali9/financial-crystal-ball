@@ -23,9 +23,10 @@ def to_markdown(text):
 
 def gen(stockInput, minDate, maxDate):
     try:
+        print("gen ran")
         response = model.generate_content(f"Based on the following stock data from `{minDate}` to `{maxDate}`: `{stockInput}`, generate predictions for the next week in the exact same format as the input. Please provide the output directly without any additional analysis or commentary.")
         text = to_markdown(response.text)
-        print("chat ran")
+        print("gen chat ran")
         return text
     except Exception as e:
         print("chat error")

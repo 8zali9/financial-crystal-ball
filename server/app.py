@@ -39,6 +39,8 @@ def getPredictions(ticker):
         print("bypassed polygon")
 
         from utils.chat import gen
+        print("utils gen import bypassed")
+
 
         res = gen(stockInputForGemini, minDate=lastLastMonthDate, maxDate=lastDayDate)
 

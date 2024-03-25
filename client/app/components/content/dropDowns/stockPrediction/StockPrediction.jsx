@@ -3,7 +3,7 @@
 import React from 'react'
 import "./stockPrediction.css";
 import { useContext } from 'react'
-import { ToggleContext } from '../../../contextProviders/Toggles'
+import { ToggleContext } from '../../../../contextProviders/Toggles'
 
 export default function StockPrediction() {
     const { handleTickerParam } = useContext(ToggleContext)

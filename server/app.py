@@ -22,6 +22,27 @@ CORS(app)
 
 
 # routes
+@app.route('/currentMartState/<tickerParamForCurrMartState>', methods=["GET"])
+def getCurrentMartState(tickerParamForCurrMartState):
+    try:
+        from datetime import date, timedelta
+        currDate = date.today()
+        lastDayDate = currDate - timedelta(days=1)
+        lastLastWeekDate = currDate - timedelta(days=11)
+
+        stockInput = []
+        for a in client.list_aggs(ticker=tickerParamForCurrMartState, multiplier=1, timespan="day", from_=lastLastWeekDate, to=lastDayDate, limit=200):
+            stockInput.append(a)
+
+        return jsonify({
+            "res": stockInput
+        }), 200
+    
+    except Exception as e:
+        return jsonify({
+            "error": "Error occurred"
+        }), 500
+
 @app.route('/getPredictions/<ticker>', methods=["GET"])
 def getPredictions(ticker):
     try:

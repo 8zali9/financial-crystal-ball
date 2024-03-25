@@ -35,10 +35,14 @@ def getPredictions(ticker):
         stockInputForGemini = []
         for a in client.list_aggs(ticker=ticker, multiplier=1, timespan="day", from_=lastLastMonthDate, to=lastDayDate, limit=150):
             stockInputForGemini.append(a)
+        
+        print("bypassed polygon")
 
         from utils.chat import gen
 
         res = gen(stockInputForGemini, minDate=lastLastMonthDate, maxDate=lastDayDate)
+
+        print("bypassed gemini")
 
         from utils.connectDB import connectDb
         predictedDoc = {
@@ -51,6 +55,8 @@ def getPredictions(ticker):
         }
         collection = connectDb(conn)
         collection.insert_one(predictedDoc)
+
+        print("bypassed db")
 
         return jsonify({
             "res": res

@@ -25,6 +25,7 @@ CORS(app)
 @app.route('/getPredictions/<ticker>', methods=["GET"])
 def getPredictions(ticker):
     try:
+        print("route hit")
         from datetime import date, timedelta, datetime
         currDate = date.today()
         lastDayDate = currDate - timedelta(days=1)

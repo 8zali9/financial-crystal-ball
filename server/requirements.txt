@@ -11,10 +11,10 @@ Flask==3.0.2
 Flask-Cors==4.0.0
 Flask-Limiter==3.5.1
 Flask-PyMongo==2.3.0
-google-ai-generativelanguage==0.4.0
+google-ai-generativelanguage
 google-api-core==2.18.0
 google-auth==2.29.0
-google-generativeai==0.4.1
+google-generativeai
 googleapis-common-protos==1.63.0
 grpcio==1.62.1
 grpcio-status==1.62.1

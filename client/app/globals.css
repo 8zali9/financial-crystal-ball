@@ -18,6 +18,20 @@ body {
     justify-content: center;
 }
 
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Define scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background: rgba(130, 214, 214, 0.651);
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: darkslategray;
+}
+
 @media only screen and (max-width: 767px) {
     body {
         overflow-x: hidden;

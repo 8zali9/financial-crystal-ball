@@ -3,6 +3,7 @@ import "./globals.css";
 import Toggles from './contextProviders/Toggles'
 import Header from "./components/Header/Header";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

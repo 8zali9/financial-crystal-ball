@@ -20,7 +20,7 @@ export default function DevContactContent() {
                         <dt><FaArrowAltCircleRight color='rgba(47, 79, 79, 0.651)' /> How the stocks prices are predicted?</dt>
                         <dd>Gemini analyzes & identifies the relation of the current and past market trends, along with it's own past predictions to make current/future predictions less error prone.</dd>
                         <dt><FaArrowAltCircleRight color='rgba(47, 79, 79, 0.651)' /> Journey of data to refined prediction.</dt>
-                        <dd>Upon your request, we fetch quality data of the past 70 days with respect to the current date from Polygon.io, which is streamed to Gemini. Gemini haing the knowledge of it's past predictions, minimizes errors, and analyzes the streamed data. After its done, it streams the response towards you.</dd>
+                        <dd>Upon request, we procure high-quality data from Polygon.io for the previous 70 days relative to the present date. This data is streamed to Gemini, leveraging its historical predictions to reduce errors and thoroughly analyze the incoming stream. Once completed, our backend retrieves the analyzed response and forwards it to you.</dd>
                     </dl>
                 </div>
 

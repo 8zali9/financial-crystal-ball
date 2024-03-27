@@ -99,7 +99,7 @@
     padding-left: 7px;
     padding-right: 7px;
     transition: 0.2s ease;
-    cursor: pointer;
+    cursor: auto;
 }
 
 .contact-devs p {
@@ -118,6 +118,7 @@
         gap: 0px;
         align-items: center;
         justify-content: flex-start;
+        margin-bottom: -110px;
     }
 
     .heading {
@@ -132,6 +133,24 @@
     }
 
     .control-panel {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        padding: 10px;
+    }
+
+    .control-panel-btns {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cp {
+        border-radius: 4px;
         margin-bottom: 10px;
     }
 }

@@ -2,8 +2,6 @@
 
 import "./header.css";
 import React, { useContext } from 'react'
-import { FaMagnifyingGlassChart } from "react-icons/fa6";
-import { IoIosArrowDropdownCircle, IoIosArrowDropupCircle } from "react-icons/io";
 import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
 import { ToggleContext } from '../../contextProviders/Toggles'
 
@@ -42,15 +40,21 @@ export default function Header() {
             }
           </div>
 
+          <div
+            onClick={handleDevContentToggle}
+            className={`cp ${devContentToggle ? "cp-active" : ""}`}
+          >
+            Contact Developers
+            {
+              devContentToggle ? <RiArrowDropUpLine fontSize='20px' /> : <RiArrowDropDownLine fontSize='20px' />
+            }
+          </div>
+
         </div>
-        <FaMagnifyingGlassChart className="cp cp-btn" />
       </div>
 
-      <div onClick={handleDevContentToggle} className="contact-devs">
-        <p>Contact Developers</p>
-        {
-          devContentToggle ? <IoIosArrowDropupCircle /> : <IoIosArrowDropdownCircle />
-        }
+      <div className="contact-devs">
+        <p>Requests / min : 5</p>
       </div>
     </div>
   )

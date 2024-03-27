@@ -95,40 +95,15 @@ dd {
 }
 
 @media only screen and (max-width: 767px) {
-    .dev-content-main {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        height: 5%;
-        margin: 20px;
-    }
-
     .dev-content-active {
         display: flex;
         flex-direction: column;
-        width: 100%;
-        overflow: hidden;
-        background-color: #aaccff7e;
-        justify-content: center;
-        border-radius: 4px;
-    }
-
-    .dev-content-active {
-        border: none;
+        position: relative;
+        top: 110px;
+        background-color: rgb(15, 26, 26);
     }
 
     .dev-content-main {
-        flex-direction: column-reverse;
-        margin-top: 10px;
-    }
-
-    .dev-content-main1,
-    .dev-content-main2 {
-        padding: 0;
-        border: none;
-    }
-
-    .dev-contact-link:hover {
-        color: white;
+        position: relative;
     }
 }

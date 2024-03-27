@@ -1,7 +1,7 @@
 "use client"
 
-import StockPrediction from './dropDowns/stockPrediction/StockPrediction'
-import CurrentMartStateToggle from './dropDowns/currentMartState/CurrentMartState'
+import StockPrediction from './dropDowns/StockPrediction'
+import CurrentMartStateToggle from './dropDowns/CurrentMartState'
 import { useContext } from 'react'
 import { ToggleContext } from '../../contextProviders/Toggles'
 import './content.css'

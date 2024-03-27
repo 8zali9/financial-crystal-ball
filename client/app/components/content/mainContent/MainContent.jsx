@@ -6,50 +6,40 @@ import { ToggleContext } from '../../../contextProviders/Toggles'
 import { parseResponseToJSON } from '../../../utils/ParseToJson'
 import { Line, Bar } from 'react-chartjs-2'
 import { Chart as ChartJS } from 'chart.js/auto'
-import { getNextDates } from '../../../utils/getNextDates'
+import { getNextDates, getPreviousDates } from '../../../utils/getNextDates'
 import { toast } from 'react-toastify';
 
 export default function MainContent() {
-  const dates = getNextDates()
+  const [dates, setDates] = useState([])
   const [stockFetchedData, setStockFetchedData] = useState([])
 
   const [stockDisplayData, setStockDisplayData] = useState({
-    labels: dates,
+    labels: [],
     datasets: []
   })
 
   const {
-    tickerParam, tickerParamForCurrMartState,
-    handleTickerParam, handleTickerParamForCurrMartState
+    tickerParam, tickerParamForCurrMartState, martStateOrPrediction, tickerHeading,
+    handleTickerParam, handleTickerParamForCurrMartState,
   } = useContext(ToggleContext)
 
   useEffect(() => {
     try {
-      if (tickerParam) {
-        setStockDisplayData(pre => ({
-          ...pre,
-          datasets: []
-        }))
-        setStockFetchedData([])
-      }
-
       async function handleFetch() {
         try {
-          if (!tickerParam) {
-            return
+          if (tickerParam) {
+            const response = await fetch(`https://financial-crytal-ball.azurewebsites.net/getPredictions/${tickerParam}`)
+
+            const data = await response.json()
+
+            const jsonData = parseResponseToJSON(data)
+            const flattenedData = jsonData.flat();
+            setStockFetchedData(flattenedData)
+            setDates(getNextDates())
+            await handleTickerParam(null)
           }
-
-          const response = await fetch(`http://localhost:5000//getPredictions/${tickerParam}`)
-
-          const data = await response.json()
-
-          const jsonData = parseResponseToJSON(data)
-          const flattenedData = jsonData.flat();
-          setStockFetchedData(flattenedData)
-          await handleTickerParam(null)
         } catch (error) {
-          console.error('Error fetching predictions:', error);
-          toast.error('Error fetching predictions. Please try again later.');
+          toast.error('Error making predictions. Please try again later.');
         }
       }
 
@@ -61,27 +51,17 @@ export default function MainContent() {
 
   useEffect(() => {
     try {
-      if (tickerParamForCurrMartState) {
-        setStockDisplayData(pre => ({
-          ...pre,
-          datasets: []
-        }))
-        setStockFetchedData([])
-      }
-
       async function handleFetch() {
         try {
-          if (!tickerParamForCurrMartState) {
-            return
+          if (tickerParamForCurrMartState) {
+            const response = await fetch(`https://financial-crytal-ball.azurewebsites.net/currentMartState/${tickerParamForCurrMartState}`)
+
+            const data = await response.json()
+
+            setStockFetchedData(data.res)
+            setDates(getPreviousDates())
+            await handleTickerParamForCurrMartState(null)
           }
-
-          const response = await fetch(`http://localhost:5000//currentMartState/${tickerParamForCurrMartState}`)
-
-          const data = await response.json()
-
-          setStockFetchedData(data.res)
-          console.log(tickerParamForCurrMartState)
-          await handleTickerParamForCurrMartState(null)
         } catch (error) {
           console.error('Error fetching current market state:', error);
           toast.error('Error fetching current market state. Please try again later.');
@@ -97,7 +77,7 @@ export default function MainContent() {
   useEffect(() => {
     try {
       setStockDisplayData(prevState => ({
-        ...prevState,
+        labels: dates,
         datasets: [
           {
             label: "Open",
@@ -122,6 +102,12 @@ export default function MainContent() {
             data: stockFetchedData.map((data) => data.low),
             backgroundColor: "red",
             borderColor: "red",
+          },
+          {
+            label: "Vwap",
+            data: stockFetchedData.map((data) => data.vwap),
+            backgroundColor: "purple",
+            borderColor: "purple",
           }
         ]
       }))
@@ -133,10 +119,13 @@ export default function MainContent() {
 
   return (
     <div className='main-content'>
-      {/* <p className='p'>WALL STREET {tickerParam && "Predictions"} {tickerParamForCurrMartState && <p>Current Market State</p>}</p>
-      <div className='div'>
-        <p>CURRENT TREND - {tickerParam || tickerParamForCurrMartState}</p>
-      </div> */}
+      {
+        martStateOrPrediction && tickerHeading &&
+        <div className='div'>
+          <p className='p'>{martStateOrPrediction}</p>
+          <p>{tickerHeading}</p>
+        </div>
+      }
       {
         stockFetchedData && stockFetchedData.length > 0 &&
         <div className='charts-div'>
